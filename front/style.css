@@ -1,0 +1,65 @@
+
+
+
+.firstp{
+	
+	color:red;
+	
+	font-size:15px;
+	
+	text-align: justify;
+}
+
+
+.lastp{
+	
+	color:green;
+	
+	
+}
+
+
+#thirdp{
+	color:green;
+}
+
+
+.box{
+	
+	border:2px solid #ff0000;
+	background-color: #00ff00;
+	
+	width: 400px;
+	height:100px;
+	padding: 0 15px 0 15px;
+	
+	box-sizing: border-box;
+	
+	
+	overflow: auto;
+	
+	
+	font-family: serif;
+	
+	
+}
+
+
+
+/*
+#secp{
+	
+	color: #ffff00;
+	
+	
+	
+}
+
+
+
+p{
+	
+	font-size:10px;
+	
+}
+*/
