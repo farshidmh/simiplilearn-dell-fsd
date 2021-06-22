@@ -1,0 +1,109 @@
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+	integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+	crossorigin="anonymous">
+
+
+
+<script>
+	function newEmployee() {
+
+		var name = document.getElementById("empName").value;
+
+		
+		
+		var data = new FormData();
+
+		data.append("name", name);
+		
+		
+		
+		var xhttp = new XMLHttpRequest();
+
+		
+		xhttp.onload = function() {
+
+			var obj = JSON.parse(this.responseText);
+
+			console.log(obj);
+
+		}
+
+		xhttp.open("POST", "http://localhost:8080/api/new", true);
+		xhttp.send(data);
+
+
+
+	}
+</script>
+
+
+
+
+</head>
+
+<body>
+
+	<div class="container pt-2">
+
+
+		<div class="card mb-2">
+
+			<div class="card-header">Check Employee</div>
+
+			<div class="card-body">
+
+				<div class="row">
+
+					<div class="col">
+						<div class="form-group">
+							<label> Employee Name</label> <input type="text" id="empName"
+								class="form-control">
+						</div>
+
+
+					</div>
+
+				</div>
+
+				<div class="row">
+					<div class="col text-center">
+						<button type="button" class="btn btn-success"
+							onclick="newEmployee()">New</button>
+					</div>
+				</div>
+
+
+			</div>
+
+
+
+		</div>
+
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

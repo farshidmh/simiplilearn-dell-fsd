@@ -12,15 +12,16 @@ public class MainController {
 	
 	@GetMapping("/")
 	public String loadMainPage(Model model) {
-		
-		
-		
-		
-		
-		
+	
 		return "index";
 	}
 	
+	
+	@GetMapping("/newe")
+	public String loadNewPage(Model model) {
+	
+		return "new";
+	}
 	
 	
 	
