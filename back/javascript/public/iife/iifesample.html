@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>Insert title here</title>
+
+
+<script>
+
+const empId = (function(){
+	
+	let count = 0;
+		
+	return function(){
+		count++;		
+		return "eme"+count;
+	}
+		
+}) ();
+
+
+
+console.log(  "A:" + empId()   )
+
+
+
+console.log(  "B:" + empId()   )
+
+
+console.log(  "C:" + empId()   )
+
+
+
+
+
+
+</script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

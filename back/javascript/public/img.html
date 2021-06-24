@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>Insert title here</title>
+
+
+
+
+<script>
+
+function turnOn(){
+	
+	document.getElementById("light").src = "on.gif";
+	
+	document.getElementById("on_btn").style.display ="none";
+	document.getElementById("off_btn").style.display ="block";
+	
+	
+}
+
+function turnOff(){
+	
+	document.getElementById("light").src = "off.gif";
+	
+	document.getElementById("off_btn").style.display ="none";
+	document.getElementById("on_btn").style.display ="block";
+}
+
+
+
+</script>
+
+
+</head>
+<body>
+
+
+<img src="off.gif" id="light">
+
+<hr>
+
+
+<button type="submit" onclick="turnOn()" id="on_btn">Turn On</button>
+
+
+<button type="submit" onclick="turnOff()" style="display:none" id="off_btn">Turn Off</button>
+
+
+</body>
+</html>

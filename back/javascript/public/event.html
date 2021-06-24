@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>Insert title here</title>
+
+<style>
+.box {
+	width: 500px;
+	height: 500px;
+	border: 1px solid #ccc;
+}
+</style>
+
+</head>
+<body>
+
+
+
+<button type="submit" id="btn"> Click </button>
+
+<br>
+
+
+<input type="text" id="fname">
+
+
+
+	<div class="box" id="result_box"></div>
+
+
+
+
+<script>
+
+function hello(){
+	
+	alert("Hello");
+	
+}
+
+
+
+
+document.getElementById("btn").addEventListener("click",hello);
+
+
+document.getElementById("fname").addEventListener("input",function(){
+
+	var a = document.getElementById("fname").value;
+	
+	
+	document.getElementById("result_box").innerHTML = a;
+	
+	
+	
+	
+	
+});
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

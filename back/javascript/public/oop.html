@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>Insert title here</title>
+
+
+<script>
+
+
+class Employee{
+	
+	
+	constructor( id, name,lastName )
+	{
+		this.id = id;
+		this.name = name;
+		this.lastName = lastName;
+		
+	}
+	
+	detail()
+	{
+		document.writeln( this.id+": "+this.name+" "+this.lastName  ) ; 
+	}
+		
+}
+
+
+var e1 = new Employee(1,"John","Doe");
+var e2 = new Employee(2,"Jane","Doe");
+
+
+
+e1.detail();
+
+
+e2.detail();
+
+
+
+
+
+
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>Insert title here</title>
+
+<style>
+.box {
+	border: 1px solid #ccc;
+	width: 500px;
+	height: 500px;
+}
+</style>
+
+
+<script>
+
+var userMap = new Map();
+
+
+const addUser = () =>{
+	
+	var n = document.getElementById("fname").value;
+	var l = document.getElementById("lname").value;
+	
+	
+	
+	userMap.set("firstName", n);
+	userMap.set("lastName",l);
+	
+	
+	document.getElementById("result").innerHTML =  userMap.get("firstName")+" "+userMap.get("lastName") ;
+	
+	
+};
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+	<input type="text" id="lname">
+	<br>
+
+	<input type="text" id="fname">
+
+	<hr>
+
+
+	<button type="button" onclick="addUser();">Add</button>
+
+
+	<hr>
+
+
+	<div class="box" id="result"></div>
+
+
+
+</body>
+</html>

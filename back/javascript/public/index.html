@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<meta charset="windows-1256">
+<title>Insert title here</title>
+
+<style>
+.box {
+	width: 500px;
+	height: 500px;
+	border: 1px solid #ccc;
+}
+</style>
+
+<script>
+	function sum(num1, num2) {
+
+		return num1 + num2;
+
+	}
+
+	function firstFunction() {
+
+		var a = parseInt(document.getElementById("inpa").value);
+
+		var b = parseInt(document.getElementById("inpb").value);
+
+		var c = sum(a, b);
+
+		document.getElementById("result_box").innerHTML = c;
+
+	}
+</script>
+
+
+
+</head>
+<body>
+
+	<input type="text" id="inpa">
+	<br>
+	<input type="text" id="inpb">
+
+
+	<button type="button" onmouseover="firstFunction()">Click</button>
+
+
+	<div class="box" id="result_box"></div>
+
+
+
+
+
+</body>
+</html>

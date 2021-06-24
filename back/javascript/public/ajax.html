@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>Insert title here</title>
+
+<style>
+.box {
+	border: 1px solid #ccc;
+	width: 500px;
+	height: 300px;
+}
+</style>
+
+
+<script>
+
+function loadInfo(){
+	
+	var xhttp = new XMLHttpRequest();
+	
+	xhttp.onload = function(){		
+		document.getElementById("result").innerHTML = this.responseText;		
+	}	
+	
+	xhttp.open("GET","ajax_text.txt");	
+	xhttp.send();
+	
+}
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+<button type="button" onclick="loadInfo()"> Load Ajax </button>
+
+
+<div id="result" class="box"></div>
+
+
+
+
+
+
+</body>
+</html>

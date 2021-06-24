@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>Insert title here</title>
+
+
+<style>
+.box {
+	width: 500px;
+	height: 500px;
+	border: 1px solid #ccc;
+}
+</style>
+
+<script>
+	function validate() {
+		var x = document.forms["login_form"];
+		for (i = 0; i < x.children.length; i++) {
+			var n = x.children[i].getAttribute('name')
+			if (n != null) {
+				var p = x[n].value;
+				if (p == "") {
+					return false;				
+				}
+			}
+		}
+		return true;
+	}
+</script>
+
+
+
+</head>
+<body>
+
+	<form method="post" onsubmit="return validate()" action="a.html"
+		name="login_form">
+
+
+		<input type=" text" name="fname" id="fname"> <br> <input
+			type="text" name="lname" id="lname"> <br> Gender: <input
+			type="radio" name="gender" id="g_m"> Male <br> <input
+			type="radio" name="gender" checked id="g_f"> Female
+
+		<hr>
+
+		<button type="submit">Show</button>
+
+	</form>
+
+
+
+	<div class="box" id="result_box"></div>
+
+
+
+
+</body>
+</html>

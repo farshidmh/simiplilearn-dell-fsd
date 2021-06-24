@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>Insert title here</title>
+
+<style>
+.box {
+	position: absolute;
+	top: 50px; 
+	width : 500px;
+	height: 500px;
+	border: 1px solid #ccc;
+	width: 500px;
+	
+	transition:0.5s all;
+	
+	
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+
+
+	<button type="button" id="btn_up">UP</button>
+
+	<button type="button" id="btn_down">DOWN</button>
+
+
+	<div class="box" id="result_box"></div>
+
+
+<script>
+
+
+document.getElementById("btn_down").addEventListener("click",function(){		
+	var x = document.getElementById('result_box').offsetTop;	
+	document.getElementById('result_box').style.top = (x+50)+"px";	
+	
+});
+
+
+
+document.getElementById("btn_up").addEventListener("click",function(){
+	var x = document.getElementById('result_box').offsetTop;	
+	document.getElementById('result_box').style.top = (x-50)+"px";	
+});
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

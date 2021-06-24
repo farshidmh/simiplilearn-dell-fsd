@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<button type="button" id="btn_show">Click</button>
+
+
+
+
+
+
+	<script>
+		function Car(make, model, year) {
+
+			this.make = make;
+			this.model = model;
+			this.year = year;
+
+		}
+
+		/*
+		 var car = {		
+		 make: "Ford",
+		 model:"Mustang",
+		 year:2020	
+		 };
+
+		 */
+
+		document.getElementById("btn_show").addEventListener("click",
+				function() {
+
+					var c1 = new Car("Ford","Mustang",2020);
+					var c2 = new Car("Toyota","Corrola",2014);
+					
+					
+console.log(c1);
+			
+			
+			
+
+				});
+	</script>
+
+
+</body>
+</html>

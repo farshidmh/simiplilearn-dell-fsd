@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>Insert title here</title>
+
+
+
+</head>
+<body>
+
+
+<button type="button" onclick="showAlert()">UP</button>
+
+
+
+
+
+
+
+<script>
+
+
+var a  = 0;
+
+function showAlert(){
+	
+	/*
+setTimeout(function(){
+	
+	alert("hello");
+	
+} , 2000   );
+*/
+	
+	
+	var x  = setInterval(function (){
+		
+		alert("Hello");
+		
+		a++;
+		
+		if(a>=5){
+			
+			clearInterval(x);
+			
+		}
+		
+		
+		
+	},2000);
+	
+	
+	
+	
+	
+}
+
+
+
+</script>
+</body>
+</html>

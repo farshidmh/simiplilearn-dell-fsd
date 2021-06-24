@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>Insert title here</title>
+
+
+<style>
+.box {
+	width: 500px;
+	height: 500px;
+	border: 1px solid #ccc;
+}
+</style>
+
+<script>
+
+
+function checkStatus(){
+	
+	var  genderM = document.getElementById("g_m").checked;
+	
+	var name = document.getElementById("fname").value;
+	
+	var family = document.getElementById("lname").value;
+	
+	var title="Ms.";
+	
+	if( genderM ){
+		
+		tite="Mr.";
+		
+	}
+
+	
+	
+	document.getElementById("result_box").innerHTML = title+name+" "+family
+		
+}
+
+
+
+
+
+
+
+</script>
+
+
+
+</head>
+<body>
+
+
+
+
+<input type="text" id="fname" id="fname">
+<br>
+<input type="text" id="lname" id="lname">
+
+<br>
+
+Gender:
+
+<input type="radio" name="gender" id="g_m"> Male
+<br>
+<input type="radio" name="gender" checked id="g_f"> Female
+
+<hr>
+
+<button type="submit" onclick="checkStatus()"> Show </button> 
+
+<div class="box" id="result_box"></div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>Insert title here</title>
+
+
+<style>
+.box {
+	border: 1px solid #ccc;
+	width: 500px;
+	height: 400px;
+}
+</style>
+
+<script>
+	var result = '{"name":"John","family":"Doe","age":20}';
+
+	function loadJson() {
+		
+		var obj = JSON.parse( result );
+				
+		document.getElementById("spn_name").innerHTML = obj.name;
+		document.getElementById("spn_family").innerHTML = obj.family;
+		document.getElementById("spn_age").innerHTML = obj.age;
+			
+
+	}
+</script>
+
+
+</head>
+<body>
+
+	<button type="button" onclick="loadJson()">Load</button>
+
+
+
+
+
+	<div class="box" id="result_box">
+		Name: <span id="spn_name"></span>
+		<br>
+		Family: <span id="spn_family"></span>
+		<br>
+		Age: <span id="spn_age"></span>
+	
+	
+	
+	
+	
+	</div>
+
+
+
+
+</body>
+</html>
