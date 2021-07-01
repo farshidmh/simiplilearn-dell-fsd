@@ -2,6 +2,7 @@ import React from "react";
 
 
 const PostDetail = (props) => {
+    console.log(props)
     return (
         <div className="card mb-3">
             <div className="card-header">
@@ -13,7 +14,7 @@ const PostDetail = (props) => {
                 <div className="card-text">Category: {props.post.category} </div>
             </div>
             <div className="card-footer">
-                <button className="btn btn-danger"> Delete</button>
+                <button className="btn btn-danger" onClick={props.onDelete} value={props.post.id}> Delete </button>
             </div>
         </div>
     );

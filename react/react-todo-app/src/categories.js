@@ -6,20 +6,24 @@ class Categories extends Component{
     render() {
 
         const categories = [
-            {code:"All",name:"All"},
+            {code:"all",name:"All"},
             ...this.props.categories
         ]
 
+        console.log(categories)
+
         return (
-            <div class="col-2">
+            <div className="row">
+            <div class="col">
                 <h4>Categories</h4>
-                <ul class="list-group">
+
                     {categories.map(  (category)=>{
-                        return <li onClick={ ()=>{this.props.onCategorySelect(category) }} >
+                        return <button className="btn btn-success mr-3" onClick={ ()=>{this.props.onCategorySelect(category) }} >
                             {category.name}
-                        </li>
+                        </button>
                     } )}
-                </ul>
+
+            </div>
             </div>
         )
 
