@@ -1,0 +1,63 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "First Title",
+      "body": "Body of the first title",
+      "author": "Farshid",
+      "category": "react"
+    },
+    {
+      "id": 2,
+      "title": "Second Title",
+      "body": "Body of the second title",
+      "author": "John",
+      "category": "redux"
+    },
+    {
+      "id": 3,
+      "title": "third Title",
+      "body": "Body of the third title",
+      "author": "Jane",
+      "category": "angular"
+    },
+    {
+      "id": 4,
+      "title": "fourth Title",
+      "body": "Body of the fourth title",
+      "author": "Sarah",
+      "category": "react"
+    }
+
+
+
+  ],
+  "categories": [
+    {
+      "code": "react",
+      "name": "React"
+    },
+    {
+      "code": "redux",
+      "name": "Redux"
+    },
+    {
+      "code": "angular",
+      "name": "Angular"
+    },
+    {
+      "code": "car",
+      "name": "Car"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Sarah"
+    },
+    {
+      "id": 2,
+      "name": "Sam"
+    }
+  ]
+}
