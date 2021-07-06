@@ -1,6 +1,10 @@
 import React from "react";
+import {connect} from "react-redux";
 
-import {getPosts, addPost, deletePost} from "./posts_api";
+import {addPost, deletePost} from "./posts_api";
+
+import {getPosts} from "./actions";
+
 
 import PostDetail from "./postDetail";
 
@@ -17,23 +21,19 @@ class Posts extends React.Component {
     }
 
     loadPostsFromApi = () => {
-
         getPosts().then((post) => {
             this.setState({posts: post})
         }).catch((error) => {
             console.log(error)
         })
-
     }
 
 
     componentDidMount() {
-        this.loadPostsFromApi();
-
+        this.props.getPosts();
     }
 
     handleDelete = (post) => {
-
         deletePost(post.target.value)
             .then((resp) => {
                 this.loadPostsFromApi();
@@ -41,20 +41,18 @@ class Posts extends React.Component {
             .catch((error) => {
                 console.log(error)
             })
-
-
     }
 
 
     renderPosts() {
 
-console.log(this.props.selectedCategory)
+        console.log(this.state.posts)
 
         const filteredPosts = this.props.selectedCategory.code === 'all'
             ?
-            this.state.posts
+            this.props.posts
             :
-            this.state.posts.filter((post) => {
+            this.props.posts.filter((post) => {
                 return post.category === this.props.selectedCategory.code
             });
 
@@ -82,4 +80,12 @@ console.log(this.props.selectedCategory)
 
 }
 
-export default Posts;
+
+const mapStateToProps = (state) => {
+    return {
+        posts: state.posts,
+        selectedCategory: state.selectedCategory
+    }
+}
+
+export default connect(mapStateToProps, {getPosts})(Posts);
